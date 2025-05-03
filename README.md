@@ -277,3 +277,8 @@ Content-Type: application/json
 
 #### Overbook Event
 - Same as Book an Event with a full event
+
+
+#### Video Demonstratino
+
+https://www.awesomescreenshot.com/video/39416270?key=3afbe70a7a0620f5309a2987bdc21f9f
