@@ -81,13 +81,6 @@ Swagger UI is available at:
 
 ---
 
-## 🧪 Running Tests
-
-```bash
-php artisan test
-```
-
----
 
 ## 📝 License
 
