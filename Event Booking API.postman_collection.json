@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "3151afcc-d8e4-4bf1-93e2-6a961855298a",
+		"name": "Event Booking API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5445084"
+	},
+	"item": [
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Create Event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <your_token>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Laravel Dev Conference\",\n  \"country\": \"USA\",\n  \"capacity\": 50,\n  \"start_time\": \"2024-12-10T10:00:00Z\",\n  \"end_time\": \"2024-12-12T17:00:00Z\"\n}"
+						},
+						"url": "http.localhost.8000/api/events"
+					},
+					"response": []
+				},
+				{
+					"name": "List Events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <your_token>"
+							}
+						],
+						"url": "http.localhost.8000/api/events"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Event",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer IP2piNXalltVOvbX9S1JCyFXIyImsJMsmuSzvI3f395e13e5"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/events/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <your_token>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Updated Title\",\n  \"country\": \"Canada\",\n  \"capacity\": 60,\n  \"start_time\": \"2024-12-11T10:00:00Z\",\n  \"end_time\": \"2024-12-13T17:00:00Z\"\n}"
+						},
+						"url": "http.localhost.8000/api/events/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Event",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <your_token>"
+							}
+						],
+						"url": "http.localhost.8000/api/events/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attendees",
+			"item": [
+				{
+					"name": "Register Attendee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\"\n}"
+						},
+						"url": "http://127.0.0.1:8000/api/attendees"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "Book an Event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"event_id\": 6,\n  \"attendee_id\": 2\n}"
+						},
+						"url": "http://127.0.0.1:8000/api/bookings"
+					},
+					"response": []
+				},
+				{
+					"name": "Try Duplicate Booking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"event_id\": 6,\n  \"attendee_id\": 2\n}"
+						},
+						"url": "http://127.0.0.1:8000/api/bookings"
+					},
+					"response": []
+				},
+				{
+					"name": "Overbook Event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"event_id\": 1,\n  \"attendee_id\": 2\n}"
+						},
+						"url": "http.localhost.8000/api/bookings"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
