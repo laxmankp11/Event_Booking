@@ -282,3 +282,6 @@ Content-Type: application/json
 #### Video Demonstratino
 
 https://www.awesomescreenshot.com/video/39416270?key=3afbe70a7a0620f5309a2987bdc21f9f
+
+####  Postman Json flle is also committed :
+Event Booking API.postman_collection.json
